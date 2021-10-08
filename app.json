@@ -2,10 +2,13 @@
     "hooks": {
         "prebuild": {
             "commands": [
-                "gcloud services enable calendar-json.googleapis.com"
-            ],
-            "commands": [
+                "gcloud services enable calendar-json.googleapis.com",
                 "gcloud iam service-accounts create habitica-sync-gcal --description='using a habitica-task-sync-with-gcal' --display-name='habitica-task-sync-with-gcal'"
+            ]
+        },
+        "precreate": {
+            "commands": [
+                "echo 'test'"
             ]
         }
     }
